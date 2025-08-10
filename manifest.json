@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "DBLP BibTeX QuickCopier",
+  "version": "1.0.0",
+  "description": "Adds a copy BibTeX button before publication titles on DBLP pages.",
+  "author": "yqtian",
+  "homepage_url": "https://github.com/yqtianust/dblp-copy-bibtex-button",
+  "permissions": ["clipboardWrite"],
+  "host_permissions": ["https://dblp.org/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://dblp.org/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
